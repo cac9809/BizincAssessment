@@ -1,4 +1,4 @@
-/*creates table of */
+/*creates table of users with both a name and email*/
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,

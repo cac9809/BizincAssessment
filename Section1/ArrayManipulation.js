@@ -1,11 +1,16 @@
 function doubleEvens(arr) {
-    return arr.map(num => num % 2 === 0 ? num * 2 : num);
+    return arr.map(num => {
+
+        if (num % 2 === 0) {
+            return num * 2; // Double an even number
+        } else {
+            return num; // Keep an odd number unchanged
+        }
+        
+    });
 }
 
-// Get user input
-const userInput = prompt("Enter an array of numbers separated by commas:");
-const inputArray = userInput.split(',').map(Number);
-
-const outputArray = doubleEvens(inputArray);
-console.log(outputArray); 
-alert("Output array: " + outputArray);
+// Example usage:
+const inputArray = [1, 2, 3, 4];
+const result = doubleEvens(inputArray);
+console.log(result); // Output: [1, 4, 3, 8]
